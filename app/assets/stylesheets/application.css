@@ -19,10 +19,18 @@
 	background-color: #CAC1AE;
 }
 
-.pure-u-1-2.stores {
+a.pure-u-1-2.stores {
 	padding: 1em 3em;
 	box-sizing:border-box;
 	background-color: #F3F1ED;
+	text-decoration: none;
+	color: #554B36;
+}
+
+a.pure-u-1-2.stores:hover, a.pure-u-1-2.stores:active {
+	background-color: #CAC1AE;
+	text-decoration: none;
+	font-weight: bold;
 }
 
 h1.title {
