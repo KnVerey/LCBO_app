@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.h-full { width: 100%; }
+.v-full { height: 100%; }
+
+.pure-menu.pure-menu-horizontal {
+	background-color: #CAC1AE;
+}
+
+.pure-u-1-2.stores {
+	padding: 1em 3em;
+	box-sizing:border-box;
+	background-color: #F3F1ED;
+}
+
+h1.title {
+	background-color: #9B8F76;
+	margin: 0;
+	padding: 1em;
+}
+
+.pure-form.centered {
+	position: absolute;
+	left: 25%;
+	top:50%;
+	width:50%;
+	text-align: center;
+}

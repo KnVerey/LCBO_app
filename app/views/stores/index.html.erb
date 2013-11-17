@@ -1,0 +1,12 @@
+<h1 class="title">Stores near <%= @postal_code %></h1>
+
+<div class="pure-g">
+	<% @stores.each do |store| %>
+		<div class="pure-u-1-2 stores">
+			<%= store.address_line_1 %>
+			<%= " (#{store.address_line_2})" unless store.address_line_2.nil? %> <br>
+			<%= store.city %> 
+			<%= "  #{store.postal_code}" %>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,7 @@
+<h1 class="title">LCBO Sale Lister</h1>
+
+<%= form_tag(stores_path, method: :get, class:"pure-form centered") do%>
+	<%= label_tag "Enter your postal code to continue" %><br><br>
+	<%= text_field_tag "postal_code", nil, placeholder: "Enter postal code" %>
+	<%= submit_tag "Continue", class: "pure-button" %>
+<% end %>
