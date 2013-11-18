@@ -30,7 +30,28 @@ a.pure-u-1-2.stores {
 a.pure-u-1-2.stores:hover, a.pure-u-1-2.stores:active {
 	background-color: #CAC1AE;
 	text-decoration: none;
-	font-weight: bold;
+}
+
+.pure-u-1-2.stores h2, h4.hours {
+	margin-bottom: 0;
+}
+
+.pure-u-1-2.hours {
+	padding: 0;
+	margin: 0;
+}
+
+.pure-u-1-2.padder {
+	padding:1em;
+	box-sizing:border-box;
+	background-color: #F3F1ED;
+}
+
+.products {
+	background-color: white;
+	padding:1em 3em;
+	box-sizing:border-box;
+
 }
 
 h1.title {
@@ -45,4 +66,21 @@ h1.title {
 	top:50%;
 	width:50%;
 	text-align: center;
+}
+
+.prod-info {
+	margin:0;
+}
+
+.prod-info.promo {
+	padding-top: 1em;
+}
+
+.mask {
+	padding:1em 3em;
+	box-sizing:border-box;
+
+	background-color: rgba(255,255,255, 0.92);
+	width: 100%;
+	height: 100%;
 }

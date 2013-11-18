@@ -5,7 +5,7 @@ LCBOApp::Application.routes.draw do
   get 'welcome/index' => 'welcome#index'
 
   resources :stores, only: [:index] do 
-    resources :products, only: [:index, :show]
+    resources :products, only: [:index]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

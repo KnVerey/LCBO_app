@@ -1,12 +1,25 @@
-<h1 class="title">Stores near <%= @postal_code %></h1>
+<h1 class="title">Choose a store near <%= @postal_code %></h1>
 
 <div class="pure-g">
 	<% @stores.each do |store| %>
 		<a href=<%= store_products_path(store.id) %> class="pure-u-1-2 stores">
-			<%= store.address_line_1 %>
-			<%= " (#{store.address_line_2})" unless store.address_line_2.nil? %> <br>
-			<%= store.city %> 
-			<%= "  #{store.postal_code}" %>
+			<h2><%= store.address_line_1 %>
+			<%= " (#{store.address_line_2})" unless store.address_line_2.nil? %></h2>
+			<%= "Store #{store.id}" %>
+			<%= "(#{store.city}, " %> 
+			<%= "  #{store.postal_code})" %> <br>
+			<%= store.telephone %>
+
+			<h4 class="hours">Store hours</h4>
+			<div class="pure-g">
+				<p class="pure-u-1-2 hours">Sunday: <%= msmTo12time(store.sunday_open) %> to <%= msmTo12time(store.sunday_close) %></p>
+				<p class="pure-u-1-2 hours">Monday: <%= msmTo12time(store.monday_open) %> to <%= msmTo12time(store.monday_close) %></p>
+				<p class="pure-u-1-2 hours">Tuesday: <%= msmTo12time(store.tuesday_open) %> to <%= msmTo12time(store.tuesday_close) %></p>
+				<p class="pure-u-1-2 hours">Wednesday: <%= msmTo12time(store.wednesday_open) %> to <%= msmTo12time(store.wednesday_close) %></p>
+				<p class="pure-u-1-2 hours">Thursday: <%= msmTo12time(store.thursday_open) %> to <%= msmTo12time(store.thursday_close) %></p>
+				<p class="pure-u-1-2 hours">Friday: <%= msmTo12time(store.friday_open) %> to <%= msmTo12time(store.friday_close) %></p>
+				<p class="pure-u-1-2 hours">Saturday: <%= msmTo12time(store.saturday_open) %> to <%= msmTo12time(store.saturday_close) %></p>
+			</div>
 		</a>
 	<% end %>
 </div>

@@ -1,0 +1,28 @@
+<h1 class="title">Products with sales at store <%= @store_id %></h1>
+
+<div class="pure-g products">
+	<% @products.each do |product| %>
+	<div class="pure-u-1-2 padder">
+		<div class="products" style="background-image: url(<%= product.image_thumb_url %>); background-size: cover;">
+			<div class="mask">
+				<h3 class = "prod-info"><%= product.name + ": " %>
+
+				<% if product.offer_savings_in_cents > 0 %>
+					<%= cents_to_dollars(product.price_in_cents - product.offer_savings_in_cents) %></h3>
+					<p class="prod-info"><%= product.primary_category %> - <%= product.secondary_category %></p>
+					<p class="prod-info"><%= product.producer_name %> (<%= product.origin %>)</p>
+					<p class="prod-info"><%= "Sugar content: " + product.sugar_content unless product.sugar_content.nil? %></p>
+					<p class="prod-info promo"><strong>Sale:</strong> savings of <%= cents_to_dollars(product.offer_savings_in_cents) %> until <%= product.offer_ends_on %>.</p>
+				<% else %>
+					<%= cents_to_dollars(product.price_in_cents) %></h3>
+					<p class="prod-info"><%= product.primary_category %> - <%= product.secondary_category %></p>
+					<p class="prod-info"><%= product.producer_name %> (<%= product.origin %>)</p>
+					<p class="prod-info"><%= "Sugar content: " + product.sugar_content unless product.sugar_content.nil? %></p>
+					<p class="prod-info promo"><strong>Promotion:</strong> <%= product.promotion_description %></p>
+				<% end %>
+
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>
