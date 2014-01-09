@@ -1,28 +1,3 @@
-== README
+== LCBO app: Project overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+In this Bitmaker Labs project, I used data fetched from the LCBO API to present users with items in their area (they input a postal code) that are on sale or other promotion. I created a gem to isolate the API calls. The gem is functional though not polished and is embedded in this repository as well.
